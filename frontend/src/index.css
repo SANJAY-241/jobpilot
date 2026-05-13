@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f0f9ff; /* Very light sky blue background */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.hero-section {
+  background: linear-gradient(135deg, #e6ebed 0%, #87caef 100%);
+  color: white;
+  padding: 80px 0;
+}
+
+.job-card {
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.job-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 .5rem 1rem rgba(170, 210, 231, 0.678)!important;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  color: #9ad4ebe9 !important;
+}
+
+.btn-primary {
+  background-color: #4aaff2;
+  border-color: #4e5356e2;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+  background-color: #75aecddb !important;
+  border-color: #51575a !important;
+}
+
+.btn-outline-primary {
+  color: #0284c7;
+  border-color: #4e5356e2;
+}
+
+.btn-outline-primary:hover {
+  background-color: #f04d4ad2;
+  color: white;
+}
+
+.text-primary {
+  color: #55575ad2 !important;
+}
+
+.bg-primary {
+  background-color: #edeeefeb !important;
+}
+
+.hover-primary:hover {
+  color: #98bfd3 !important;
+}
+
+/* Animations */
+@keyframes rocketLaunch {
+  0% { transform: translateY(0) rotate(0deg) scale(1); }
+  25% { transform: translateY(-5px) rotate(5deg) scale(1.05); }
+  50% { transform: translateY(-10px) rotate(-5deg) scale(1.1); }
+  75% { transform: translateY(-5px) rotate(5deg) scale(1.05); }
+  100% { transform: translateY(0) rotate(0deg) scale(1); }
+}
+
+@keyframes textGradientPulse {
+  0% { background-position: 0% 50%; opacity: 0.9; }
+  50% { background-position: 100% 50%; opacity: 1; transform: scale(1.02); }
+  100% { background-position: 0% 50%; opacity: 0.9; }
+}
+
+.animate-rocket {
+  animation: rocketLaunch 20s ease-in-out infinite;
+  display: inline-block;
+}
+
+.animate-text {
+  background: linear-gradient(270deg, #5ba4a4d7, #65c1e6f1, #4679d9ba);
+  background-size: 200% 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textGradientPulse 0s ease infinite;
+  display: inline-block;
+}
